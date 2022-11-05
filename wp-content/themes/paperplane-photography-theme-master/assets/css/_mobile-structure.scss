@@ -1,0 +1,376 @@
+// main: style.scss
+@import 'global-vars';
+@import 'global-mixin'; // wrappers and more
+
+.only-desktop {
+  display: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper-padded {
+  position: relative;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper-padded-more {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper-padded-more-650,
+.wrapper-padded-more-840 {
+  position: relative;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 0 10px;
+}
+// paddings- margins
+
+.plain-page {
+  @include define-margins(30px, 0, 0, 0);
+}
+
+.photo-frame {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$header-height} - #{$title-fix-mob});
+}
+
+.photo-hold {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$header-height} - #{$title-fix-mob});
+  margin: 0;
+
+  img {
+    width: 100%;
+    height: calc(100vh - #{$header-height} - #{$title-fix-mob});
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+  }
+}
+
+.navi-click {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.absl_swipe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include define-basic-transition(opacity,0.3s);
+  opacity: 0;
+
+  &.swipe-info {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      margin: -25px 0 0;
+      background-image: url("assets/images/swipe.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    background-color: rgba(25, 25, 25, 0.8);
+    opacity: 1;
+  }
+}
+
+.photo-navi {
+  position: relative;
+  padding: 20px 0 15px;
+}
+// flex boxes
+
+.flex-hold {
+  position: relative;
+  width: 100%;
+  @include flex-wrap;
+}
+
+.flex-hold-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  margin: 10px 0 30px;
+
+  h2 {
+    margin-bottom: 5px;
+  }
+}
+
+.flex-hold-2,
+.flex-hold-3,
+.flex-hold-5 {
+  &.margins-wide {
+    margin-top: 33px;
+
+    .flex-hold-child {
+      position: relative;
+      -webkit-box-flex: 1;
+      width: 100%;
+      margin: 0 0 33px;
+    }
+  }
+}
+
+.masonry-grid {
+  position: relative;
+  margin-top: 10px;
+
+  &.masonry-three,
+  &.masonry-two {
+    .flex-hold-child,
+    .grid-sizer {
+      position: relative;
+      width: calc(100% - 20px);
+      margin: 10px;
+    }
+  }
+}
+
+.gallery-thumb-box {
+  margin: 20px 0;
+}
+
+.gallery-thumb {
+  display: inline-block;
+  width: calc(25% - 20px);
+  margin: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.loading-transition-effect {
+  top: calc(#{$header-mob-height} + 1px);
+  height: calc(100vh - #{$header-mob-height});
+}
+
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignnone,
+.wp-caption.alignright {
+  position: relative;
+  width: 100% !important;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.gallery-slider {
+  position: relative;
+  width: 100%;
+  //height: calc(100vh - #{$header-height} - 40px);
+  margin: 20px 0 0;
+
+  &.video-slide {
+    margin: 40px 0 0;
+
+    .slick-next,
+    .slick-prev {
+      top: -40px;
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      @include define-basic-transition(all,0.3s);
+      border-bottom: solid 1px;
+    }
+
+    .slide-picture-contaniner {
+      .slide-picture {
+        embed,
+        iframe,
+        object {
+          height: calc(100vh - #{$header-mob-height} - 80px);
+        }
+      }
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    top: -80px;
+    width: 50%;
+    height: 40px;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    font-size: $paragraph-lineheight-desktop;
+    line-height: 40px;
+    font-weight: $font-weight-2;
+    text-align: center;
+    @include define-basic-transition(all,0.3s);
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slide-picture-contaniner {
+    width: 100%;
+
+    .slide-picture {
+      embed,
+      iframe,
+      img,
+      object {
+        width: 100%;
+        height: calc(100vh - #{$header-mob-height} - 40px);
+        -o-object-fit: contain;
+        object-fit: contain;
+        -o-object-position: 50% 50%;
+        object-position: 50% 50%;
+      }
+    }
+
+    .slide-picture {
+      margin: 0 0 15px;
+    }
+  }
+}
+
+.gallery-slider-nav {
+  margin: 20px 0;
+
+  .slick-list {
+    margin: 0 -10px;
+  }
+
+  .slick-slide {
+    margin: 0 10px;
+  }
+
+  &.no-current {
+    .slick-current {
+      opacity: 1;
+      @include define-basic-transition(all, 0.15s);
+    }
+  }
+
+  .slick-current {
+    opacity: 0.15;
+    @include define-basic-transition(all, 0.15s);
+  }
+
+  .slide-thumb {
+    cursor: pointer;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.scroll-image-hold {
+  .lined {
+    &:first-child {
+      margin: 3.5vh 0 7vh;
+      padding: 3.5vh 0 7vh;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .scroll-image {
+    position: relative;
+    width: 100%;
+    margin: 7vh 0 0;
+    padding: 0 0 7vh;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .picture-info {
+      margin: 20px 0 0;
+      padding: 0;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.gallery-footer {
+  border-top: solid 1px;
+  margin-top: 7vh !important;
+  padding-top: 35px;
+  width: 100%;
+  //overflow: hidden;
+  h6 {
+    margin-bottom: 0;
+  }
+
+  a {
+    position: relative;
+
+    &:hover {
+      .label {
+        opacity: 1;
+      }
+    }
+
+    .label {
+      width: calc(100vw - 30px);
+      top: 22px;
+      position: absolute;
+      font-weight: lighter;
+      @include define-basic-transition(all, 0.3s);
+      text-align: center;
+      opacity: 0;
+    }
+  }
+
+  .left {
+    text-align: right;
+    width: calc(50% - 17px);
+    margin: 0 17px 0 0;
+
+    .label {
+      right: -50vw;
+    }
+  }
+
+  .right {
+    -webkit-box-flex: 1;
+    width: calc(50% - 17px);
+    margin: 0 0 0 17px;
+
+    .label {
+      left: -50vw;
+    }
+  }
+}

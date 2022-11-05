@@ -1,0 +1,708 @@
+{
+    "key": "group_5dfccae53e4bc",
+    "title": "Set color & typo options",
+    "fields": [
+        {
+            "key": "field_5ecfb83bffa88",
+            "label": "Header logo \/ text",
+            "name": "",
+            "type": "accordion",
+            "instructions": "If no logo is set header will display a custom text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e3e9aeeca63e",
+            "label": "Custom logo (for clear color scheme)",
+            "name": "custom_logo",
+            "type": "image",
+            "instructions": "Upload a logo for clear color scheme. A black or dark grey logo is the best option.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e4017303f315",
+            "label": "Custom logo (for dark color scheme)",
+            "name": "custom_logo_dark",
+            "type": "image",
+            "instructions": "Upload a logo for dark color scheme. A white or light grey logo is the best option.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ecfb89effa89",
+            "label": "Custom text",
+            "name": "header_custom_text",
+            "type": "text",
+            "instructions": "Used instead of custom logo.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3e9aeeca63e",
+                        "operator": "==empty"
+                    },
+                    {
+                        "field": "field_5e4017303f315",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfb90f1f868",
+            "label": "Typography",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5dfccba411af3",
+            "label": "Link Google font",
+            "name": "link_google_font",
+            "type": "text",
+            "instructions": "You can choose any font from <a href=\"https:\/\/fonts.google.com\/\" target=\"_blank\">Google Fonts<\/a>.<br \/>",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/fonts.googleapis.com\/css?family=Roboto:400,400i,700,700i&display=swap",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfb92a1f869",
+            "label": "Body font-family",
+            "name": "body_font_family",
+            "type": "text",
+            "instructions": "Specify font family for body - Example: 'Noto Serif KR', serif",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfb9a81f86b",
+            "label": "Body font-weight",
+            "name": "body_font_weight",
+            "type": "text",
+            "instructions": "Specify font weight for body - Example: 800",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfb96e1f86a",
+            "label": "Titles font-family",
+            "name": "titles_font_family",
+            "type": "text",
+            "instructions": "Specify font family for titles (H1, H2, H3, H4, H5, H6) - Example: 'Noto Serif KR', serif;",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfb9d31f86c",
+            "label": "Titles font-weight",
+            "name": "titles_font_weight",
+            "type": "text",
+            "instructions": "Specify font weight for titles (H1, H2, H3, H4, H5, H6) - Example: 800",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfba681f86f",
+            "label": "Paragraphs font-family",
+            "name": "paragraphs_font_family",
+            "type": "text",
+            "instructions": "Specify font family for paragraphs - Example: 'Noto Serif KR', serif;",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfba6c1f870",
+            "label": "Paragraphs font-weight",
+            "name": "paragraphs_font_weight",
+            "type": "text",
+            "instructions": "Specify font weight for paragraphs - Example: 800",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfba0a1f86d",
+            "label": "Inputs font-family",
+            "name": "inputs_font_family",
+            "type": "text",
+            "instructions": "Specify font family for input fields - Example: 'Noto Serif KR', serif;",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfba0e1f86e",
+            "label": "Inputs font-weight",
+            "name": "inputs_font_weight",
+            "type": "text",
+            "instructions": "Specify font weight for inputs - Example: 800",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfbc49dc268",
+            "label": "Menu font-family",
+            "name": "menu_font_family",
+            "type": "text",
+            "instructions": "Specify font family for menu - Example: 'Noto Serif KR', serif;",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfbc4fdc269",
+            "label": "Menu font-weight",
+            "name": "menu_font_weight",
+            "type": "text",
+            "instructions": "Specify font weight for menu - Example: 800",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfbe0fd71c5",
+            "label": "Navi text font-family",
+            "name": "navitext_font_family",
+            "type": "text",
+            "instructions": "Specify font family for navigation text - Example: 'Noto Serif KR', serif;",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfbe14d71c6",
+            "label": "Navi text font-weight",
+            "name": "navitext_font_weight",
+            "type": "text",
+            "instructions": "Specify font weight for navigation text - Example: 800",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfbef8a0c0c",
+            "label": "CTA font-family",
+            "name": "cta_font_family",
+            "type": "text",
+            "instructions": "Specify font family for CTA - Example: 'Noto Serif KR', serif;",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfbefca0c0d",
+            "label": "CTA font-weight",
+            "name": "cta_font_weight",
+            "type": "text",
+            "instructions": "Specify font weight for CTA - Example: 800",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecfbdb0169c5",
+            "label": "Other options",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_60c4d2524924b",
+            "label": "Display hamburger button on desktop?",
+            "name": "show_hamburger_button_desktop",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e4028cd10427",
+            "label": "Footer texts",
+            "name": "credits_and_more",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5edcf2dea1256",
+            "label": "Favicons path",
+            "name": "favicons_path",
+            "type": "select",
+            "instructions": "This theme uses a set of icons and not just one favicon in order to make it available on oll devices.<br \/>\r\nIf you want to use custom icons icons follow these steps:<br \/>\r\n- start from a png sized at least 200x200 pixel<br \/>\r\n- upload image to https:\/\/www.favicon-generator.org\/ to generate the icons set and download the zip file with all icons<br \/>\r\n- via SFTP upload zip file contents on your server: in the same folder where WordPress is installed create a folder named \"favicons\"<br \/><br \/>\r\n\r\nThe complete set of icons must include these files:<br \/>\r\n- apple-icon-57x57.png<br \/>\r\n- apple-icon-60x60.png<br \/>\r\n- apple-icon-72x72.png<br \/>\r\n- apple-icon-76x76.png<br \/>\r\n- apple-icon-114x114.png<br \/>\r\n- apple-icon-120x120.png<br \/>\r\n- apple-icon-144x144.png<br \/>\r\n- apple-icon-152x152.png<br \/>\r\n- apple-icon-180x180.png<br \/>\r\n- android-icon-192x192.png<br \/>\r\n- favicon-32x32.png<br \/>\r\n- favicon-96x96.png<br \/>\r\n- favicon-16x16.png<br \/>\r\n- manifest.json<br \/>\r\n- ms-icon-144x144.png",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default-path": "Use theme default icons",
+                "custom-path": "Use custom icons"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5eddd09ae1389",
+            "label": "Enable PWA",
+            "name": "enable_pwa",
+            "type": "select",
+            "instructions": "A progressive web application (PWA) is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. You can enable PWA and in some OS\/browsers this site will be available as app.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "yes": "Yes"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_609643444a348",
+            "label": "Color options",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e3eba3178f54",
+            "label": "Initial colors scheme",
+            "name": "start_color_scheme",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "clear": "Clear mode",
+                "dark": "Dark mode"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_609643be4a349",
+            "label": "Custom colors",
+            "name": "custom_colors",
+            "type": "true_false",
+            "instructions": "Setting custom colors will override clear color scheme. Pick 5 custom colors. Colors from 1 to 3 are used for backgrounds and borders. Colors number 4 and 5 are used for texts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6096444b4a34a",
+            "label": "Color 1",
+            "name": "custom_color_1",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_609643be4a349",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_609644b64a34b",
+            "label": "Color 2",
+            "name": "custom_color_2",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_609643be4a349",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#F9F9F9"
+        },
+        {
+            "key": "field_609644c24a34c",
+            "label": "Color 3",
+            "name": "custom_color_3",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_609643be4a349",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#AFAFAF"
+        },
+        {
+            "key": "field_609644ce4a34d",
+            "label": "Color 4",
+            "name": "custom_color_4",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_609643be4a349",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#4D4D4D"
+        },
+        {
+            "key": "field_609644df4a34e",
+            "label": "Color 5",
+            "name": "custom_color_5",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_609643be4a349",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#303030"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-color-typo-options"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1623511868
+}

@@ -1,0 +1,317 @@
+{
+    "key": "group_5c8d103b4a24d",
+    "title": "Global image galleries options",
+    "fields": [
+        {
+            "key": "field_5c8d104e4f119",
+            "label": "Display images counter in gallery?",
+            "name": "contatore_foto",
+            "type": "select",
+            "instructions": "Activate to show images counter (e.g. 1\/10) in galleries.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "si": "Yes",
+                "no": "No"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c8d11e066065",
+            "label": "Show photo thumbnail list?",
+            "name": "elenco_foto",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "si": "Yes",
+                "no": "No"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c8d125405962",
+            "label": "Show photo highlighter?",
+            "name": "evidenziatore_foto",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "si": "Yes",
+                "no": "No"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c8d126805963",
+            "label": "Show back to the list?",
+            "name": "torna_elenco",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "si": "Yes",
+                "no": "No"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e19ce734476b",
+            "label": "Show play\/pause button?",
+            "name": "show_play_pause_button",
+            "type": "select",
+            "instructions": "Enabling play\/pause will let  visitors use galleries as slideshows.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "si": "Yes"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e19cf004476c",
+            "label": "Set image duration",
+            "name": "set_image_duration",
+            "type": "number",
+            "instructions": "Set time (in milliseconds) of each slide duration.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e19ce734476b",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3000,
+            "placeholder": 3000,
+            "prepend": "",
+            "append": "",
+            "min": 1000,
+            "max": "",
+            "step": 1000
+        },
+        {
+            "key": "field_6352b2af4a8ad",
+            "label": "Show navigation between portfolio items on bottom?",
+            "name": "show_navigation_between_portfolio_items",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "yes-navi": "Yes - show navigation between portfolio items on bottom",
+                "yes-cat": "Yes - show a link to back to category listing"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5dfcbda6df694",
+            "label": "Do you want to sell your photos?",
+            "name": "vendere_foto",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "si": "Yes"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5dfcbbfaadd14",
+            "label": "Email address for PayPal payments",
+            "name": "indirizzo_email_paypal",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dfcbda6df694",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5dfcbcd2df692",
+            "label": "Type of currency",
+            "name": "tipo_di_valuta",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dfcbda6df694",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "USD": "U.S. Dollar",
+                "EUR": "Euro"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5dfcbd6ddf693",
+            "label": "Shipping cost",
+            "name": "costi_di_spedizione",
+            "type": "text",
+            "instructions": "Use dot as separator - eg 12.00",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dfcbda6df694",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-image-gallery-options"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1666418050
+}
